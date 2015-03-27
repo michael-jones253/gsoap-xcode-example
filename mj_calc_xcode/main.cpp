@@ -11,7 +11,10 @@
 #include "soapcalcProxy.h"
 #include "calc.nsmap"
 
-const char server[] = "http://websrv.cs.fsu.edu/~engelen/calcserver.cgi";
+// const char server[] = "http://websrv.cs.fsu.edu/~engelen/calcserver.cgi";
+// const char server[] = "http://localhost/cgi-bin/mj_calc_cgi";
+const char server[] = "localhost";
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...

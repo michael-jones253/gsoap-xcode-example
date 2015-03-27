@@ -12,10 +12,23 @@
 		B208A05A1AC4EDBA0078FD8D /* stdsoap2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A0581AC4EDBA0078FD8D /* stdsoap2.cpp */; };
 		B208A0601AC4F2330078FD8D /* soapC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A05B1AC4F2330078FD8D /* soapC.cpp */; };
 		B208A0611AC4F2330078FD8D /* soapcalcProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A05C1AC4F2330078FD8D /* soapcalcProxy.cpp */; };
+		B208A0691AC4F5620078FD8D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A0681AC4F5620078FD8D /* main.cpp */; };
+		B208A06E1AC4F7440078FD8D /* libgsoap++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B208A0561AC4ED580078FD8D /* libgsoap++.a */; };
+		B208A0741AC4F7FA0078FD8D /* soapC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A0701AC4F7FA0078FD8D /* soapC.cpp */; };
+		B208A0751AC4F7FA0078FD8D /* soapcalcService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A0711AC4F7FA0078FD8D /* soapcalcService.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B208A0471AC4EA000078FD8D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B208A0641AC4F5620078FD8D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -39,6 +52,14 @@
 		B208A05D1AC4F2330078FD8D /* soapcalcProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapcalcProxy.h; sourceTree = "<group>"; };
 		B208A05E1AC4F2330078FD8D /* soapH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapH.h; sourceTree = "<group>"; };
 		B208A05F1AC4F2330078FD8D /* soapStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapStub.h; sourceTree = "<group>"; };
+		B208A0661AC4F5620078FD8D /* mj_calc_cgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mj_calc_cgi; sourceTree = BUILT_PRODUCTS_DIR; };
+		B208A0681AC4F5620078FD8D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B208A06F1AC4F7FA0078FD8D /* calc.nsmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc.nsmap; sourceTree = "<group>"; };
+		B208A0701AC4F7FA0078FD8D /* soapC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = soapC.cpp; sourceTree = "<group>"; };
+		B208A0711AC4F7FA0078FD8D /* soapcalcService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = soapcalcService.cpp; sourceTree = "<group>"; };
+		B208A0721AC4F7FA0078FD8D /* soapcalcService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapcalcService.h; sourceTree = "<group>"; };
+		B208A0731AC4F7FA0078FD8D /* soapH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapH.h; sourceTree = "<group>"; };
+		B208A0761AC4F8610078FD8D /* soapStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapStub.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +71,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B208A0631AC4F5620078FD8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B208A06E1AC4F7440078FD8D /* libgsoap++.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +87,7 @@
 			children = (
 				B208A0561AC4ED580078FD8D /* libgsoap++.a */,
 				B208A04B1AC4EA000078FD8D /* mj_calc_xcode */,
+				B208A0671AC4F5620078FD8D /* mj_calc_cgi */,
 				B208A04A1AC4EA000078FD8D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				B208A0491AC4EA000078FD8D /* mj_calc_xcode */,
+				B208A0661AC4F5620078FD8D /* mj_calc_cgi */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +116,20 @@
 				B208A0541AC4EBED0078FD8D /* calc.nsmap */,
 			);
 			path = mj_calc_xcode;
+			sourceTree = "<group>";
+		};
+		B208A0671AC4F5620078FD8D /* mj_calc_cgi */ = {
+			isa = PBXGroup;
+			children = (
+				B208A0681AC4F5620078FD8D /* main.cpp */,
+				B208A0761AC4F8610078FD8D /* soapStub.h */,
+				B208A06F1AC4F7FA0078FD8D /* calc.nsmap */,
+				B208A0701AC4F7FA0078FD8D /* soapC.cpp */,
+				B208A0711AC4F7FA0078FD8D /* soapcalcService.cpp */,
+				B208A0721AC4F7FA0078FD8D /* soapcalcService.h */,
+				B208A0731AC4F7FA0078FD8D /* soapH.h */,
+			);
+			path = mj_calc_cgi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +153,24 @@
 			productReference = B208A0491AC4EA000078FD8D /* mj_calc_xcode */;
 			productType = "com.apple.product-type.tool";
 		};
+		B208A0651AC4F5620078FD8D /* mj_calc_cgi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B208A06A1AC4F5620078FD8D /* Build configuration list for PBXNativeTarget "mj_calc_cgi" */;
+			buildPhases = (
+				B208A06D1AC4F65E0078FD8D /* ShellScript */,
+				B208A0621AC4F5620078FD8D /* Sources */,
+				B208A0631AC4F5620078FD8D /* Frameworks */,
+				B208A0641AC4F5620078FD8D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mj_calc_cgi;
+			productName = mj_calc_cgi;
+			productReference = B208A0661AC4F5620078FD8D /* mj_calc_cgi */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -118,6 +181,9 @@
 				ORGANIZATIONNAME = "Michael Jones";
 				TargetAttributes = {
 					B208A0481AC4EA000078FD8D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					B208A0651AC4F5620078FD8D = {
 						CreatedOnToolsVersion = 6.2;
 					};
 				};
@@ -135,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				B208A0481AC4EA000078FD8D /* mj_calc_xcode */,
+				B208A0651AC4F5620078FD8D /* mj_calc_cgi */,
 			);
 		};
 /* End PBXProject section */
@@ -153,6 +220,19 @@
 			shellPath = /bin/sh;
 			shellScript = "../../src/soapcpp2 -i -w -C mj_calc_xcode/calc.h\ncp soapC.cpp mj_calc_xcode\ncp soapH.h mj_calc_xcode\ncp soapStub.h mj_calc_xcode\ncp soapcalcProxy.h mj_calc_xcode\ncp soapcalcProxy.cpp mj_calc_xcode\n";
 		};
+		B208A06D1AC4F65E0078FD8D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "../../src/soapcpp2 -i -x -S mj_calc_xcode/calc.h\ncp soapC.cpp mj_calc_cgi\ncp soapH.h mj_calc_cgi\ncp soapStub.h mj_calc_cgi\ncp soapcalcService.h mj_calc_cgi\ncp soapcalcService.cpp mj_calc_cgi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -164,6 +244,16 @@
 				B208A0601AC4F2330078FD8D /* soapC.cpp in Sources */,
 				B208A0611AC4F2330078FD8D /* soapcalcProxy.cpp in Sources */,
 				B208A05A1AC4EDBA0078FD8D /* stdsoap2.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B208A0621AC4F5620078FD8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B208A0741AC4F7FA0078FD8D /* soapC.cpp in Sources */,
+				B208A0751AC4F7FA0078FD8D /* soapcalcService.cpp in Sources */,
+				B208A0691AC4F5620078FD8D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +356,32 @@
 			};
 			name = Release;
 		};
+		B208A06B1AC4F5620078FD8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/michaeljones/Documents/gsoap-2.8/gsoap",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B208A06C1AC4F5620078FD8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/michaeljones/Documents/gsoap-2.8/gsoap",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -283,6 +399,14 @@
 			buildConfigurations = (
 				B208A0511AC4EA000078FD8D /* Debug */,
 				B208A0521AC4EA000078FD8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B208A06A1AC4F5620078FD8D /* Build configuration list for PBXNativeTarget "mj_calc_cgi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B208A06B1AC4F5620078FD8D /* Debug */,
+				B208A06C1AC4F5620078FD8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
