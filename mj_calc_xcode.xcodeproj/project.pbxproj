@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B208A04D1AC4EA000078FD8D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A04C1AC4EA000078FD8D /* main.cpp */; };
+		B208A0571AC4ED580078FD8D /* libgsoap++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B208A0561AC4ED580078FD8D /* libgsoap++.a */; };
+		B208A05A1AC4EDBA0078FD8D /* stdsoap2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A0581AC4EDBA0078FD8D /* stdsoap2.cpp */; };
+		B208A0601AC4F2330078FD8D /* soapC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A05B1AC4F2330078FD8D /* soapC.cpp */; };
+		B208A0611AC4F2330078FD8D /* soapcalcProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A05C1AC4F2330078FD8D /* soapcalcProxy.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,16 @@
 /* Begin PBXFileReference section */
 		B208A0491AC4EA000078FD8D /* mj_calc_xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mj_calc_xcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		B208A04C1AC4EA000078FD8D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B208A0531AC4EBED0078FD8D /* calc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calc.h; sourceTree = "<group>"; };
+		B208A0541AC4EBED0078FD8D /* calc.nsmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc.nsmap; sourceTree = "<group>"; };
+		B208A0561AC4ED580078FD8D /* libgsoap++.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgsoap++.a"; path = "../../libgsoap++.a"; sourceTree = "<group>"; };
+		B208A0581AC4EDBA0078FD8D /* stdsoap2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdsoap2.cpp; sourceTree = "<group>"; };
+		B208A0591AC4EDBA0078FD8D /* stdsoap2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdsoap2.h; sourceTree = "<group>"; };
+		B208A05B1AC4F2330078FD8D /* soapC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = soapC.cpp; sourceTree = "<group>"; };
+		B208A05C1AC4F2330078FD8D /* soapcalcProxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = soapcalcProxy.cpp; sourceTree = "<group>"; };
+		B208A05D1AC4F2330078FD8D /* soapcalcProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapcalcProxy.h; sourceTree = "<group>"; };
+		B208A05E1AC4F2330078FD8D /* soapH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapH.h; sourceTree = "<group>"; };
+		B208A05F1AC4F2330078FD8D /* soapStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapStub.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B208A0571AC4ED580078FD8D /* libgsoap++.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +56,7 @@
 		B208A0401AC4EA000078FD8D = {
 			isa = PBXGroup;
 			children = (
+				B208A0561AC4ED580078FD8D /* libgsoap++.a */,
 				B208A04B1AC4EA000078FD8D /* mj_calc_xcode */,
 				B208A04A1AC4EA000078FD8D /* Products */,
 			);
@@ -58,6 +74,15 @@
 			isa = PBXGroup;
 			children = (
 				B208A04C1AC4EA000078FD8D /* main.cpp */,
+				B208A05B1AC4F2330078FD8D /* soapC.cpp */,
+				B208A05C1AC4F2330078FD8D /* soapcalcProxy.cpp */,
+				B208A05D1AC4F2330078FD8D /* soapcalcProxy.h */,
+				B208A05E1AC4F2330078FD8D /* soapH.h */,
+				B208A05F1AC4F2330078FD8D /* soapStub.h */,
+				B208A0581AC4EDBA0078FD8D /* stdsoap2.cpp */,
+				B208A0591AC4EDBA0078FD8D /* stdsoap2.h */,
+				B208A0531AC4EBED0078FD8D /* calc.h */,
+				B208A0541AC4EBED0078FD8D /* calc.nsmap */,
 			);
 			path = mj_calc_xcode;
 			sourceTree = "<group>";
@@ -69,6 +94,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B208A0501AC4EA000078FD8D /* Build configuration list for PBXNativeTarget "mj_calc_xcode" */;
 			buildPhases = (
+				B208A0551AC4ED0B0078FD8D /* ShellScript */,
 				B208A0451AC4EA000078FD8D /* Sources */,
 				B208A0461AC4EA000078FD8D /* Frameworks */,
 				B208A0471AC4EA000078FD8D /* CopyFiles */,
@@ -113,12 +139,31 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B208A0551AC4ED0B0078FD8D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "../../src/soapcpp2 -i -w -C mj_calc_xcode/calc.h\ncp soapC.cpp mj_calc_xcode\ncp soapH.h mj_calc_xcode\ncp soapStub.h mj_calc_xcode\ncp soapcalcProxy.h mj_calc_xcode\ncp soapcalcProxy.cpp mj_calc_xcode\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B208A0451AC4EA000078FD8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B208A04D1AC4EA000078FD8D /* main.cpp in Sources */,
+				B208A0601AC4F2330078FD8D /* soapC.cpp in Sources */,
+				B208A0611AC4F2330078FD8D /* soapcalcProxy.cpp in Sources */,
+				B208A05A1AC4EDBA0078FD8D /* stdsoap2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +247,10 @@
 		B208A0511AC4EA000078FD8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/michaeljones/Documents/gsoap-2.8/gsoap",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +258,10 @@
 		B208A0521AC4EA000078FD8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/michaeljones/Documents/gsoap-2.8/gsoap",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
