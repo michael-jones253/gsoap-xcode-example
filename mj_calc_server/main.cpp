@@ -58,9 +58,10 @@ int main(int argc, const char * argv[]) {
     
     auto cleanupTask = [&]{
         while (true) {
+            future<int> waitHandle{};
+
             auto shouldSleep = bool{};
             {
-                future<int> waitHandle{};
                 lock_guard<mutex> guard{ cleanupMutex };
                 
                 auto beforeBegin = handles.before_begin();
@@ -72,16 +73,18 @@ int main(int argc, const char * argv[]) {
                     
                     // auto fres = it->get();
                     handles.erase_after(beforeBegin);
-                    cerr << "child removed!!!!!" << endl;
+                    cerr << "child cleaned!!!!!" << endl;
                 }
                 else {
                     shouldSleep = true;
                 }
                 
-                if (waitHandle.valid()) {
-                    auto res = waitHandle.get();
-                    cerr << "child cleaned!!!!! " << res << endl;
-                }
+            }
+
+            // Perform wait outside the lock.
+            if (waitHandle.valid()) {
+                auto res = waitHandle.get();
+                cerr << "child delivered!!!!! " << res << endl;
             }
             
             if (shouldSleep) {
