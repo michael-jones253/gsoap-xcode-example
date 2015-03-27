@@ -16,6 +16,10 @@
 		B208A06E1AC4F7440078FD8D /* libgsoap++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B208A0561AC4ED580078FD8D /* libgsoap++.a */; };
 		B208A0741AC4F7FA0078FD8D /* soapC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A0701AC4F7FA0078FD8D /* soapC.cpp */; };
 		B208A0751AC4F7FA0078FD8D /* soapcalcService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B208A0711AC4F7FA0078FD8D /* soapcalcService.cpp */; };
+		B2B70D831AC4FD97004C61AA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2B70D821AC4FD97004C61AA /* main.cpp */; };
+		B2B70D881AC4FE39004C61AA /* libgsoap++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B208A0561AC4ED580078FD8D /* libgsoap++.a */; };
+		B2B70D8E1AC4FEEA004C61AA /* soapC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2B70D891AC4FEEA004C61AA /* soapC.cpp */; };
+		B2B70D8F1AC4FEEA004C61AA /* soapcalcService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2B70D8A1AC4FEEA004C61AA /* soapcalcService.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +33,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		B208A0641AC4F5620078FD8D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B2B70D7E1AC4FD97004C61AA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -60,6 +73,14 @@
 		B208A0721AC4F7FA0078FD8D /* soapcalcService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapcalcService.h; sourceTree = "<group>"; };
 		B208A0731AC4F7FA0078FD8D /* soapH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapH.h; sourceTree = "<group>"; };
 		B208A0761AC4F8610078FD8D /* soapStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapStub.h; sourceTree = "<group>"; };
+		B2B70D801AC4FD97004C61AA /* mj_calc_server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mj_calc_server; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2B70D821AC4FD97004C61AA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B2B70D891AC4FEEA004C61AA /* soapC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = soapC.cpp; sourceTree = "<group>"; };
+		B2B70D8A1AC4FEEA004C61AA /* soapcalcService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = soapcalcService.cpp; sourceTree = "<group>"; };
+		B2B70D8B1AC4FEEA004C61AA /* soapcalcService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapcalcService.h; sourceTree = "<group>"; };
+		B2B70D8C1AC4FEEA004C61AA /* soapH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapH.h; sourceTree = "<group>"; };
+		B2B70D8D1AC4FEEA004C61AA /* soapStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soapStub.h; sourceTree = "<group>"; };
+		B2B70D901AC4FF21004C61AA /* calc.nsmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc.nsmap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +100,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2B70D7D1AC4FD97004C61AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B70D881AC4FE39004C61AA /* libgsoap++.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +117,7 @@
 				B208A0561AC4ED580078FD8D /* libgsoap++.a */,
 				B208A04B1AC4EA000078FD8D /* mj_calc_xcode */,
 				B208A0671AC4F5620078FD8D /* mj_calc_cgi */,
+				B2B70D811AC4FD97004C61AA /* mj_calc_server */,
 				B208A04A1AC4EA000078FD8D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +127,7 @@
 			children = (
 				B208A0491AC4EA000078FD8D /* mj_calc_xcode */,
 				B208A0661AC4F5620078FD8D /* mj_calc_cgi */,
+				B2B70D801AC4FD97004C61AA /* mj_calc_server */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +161,20 @@
 				B208A0731AC4F7FA0078FD8D /* soapH.h */,
 			);
 			path = mj_calc_cgi;
+			sourceTree = "<group>";
+		};
+		B2B70D811AC4FD97004C61AA /* mj_calc_server */ = {
+			isa = PBXGroup;
+			children = (
+				B2B70D821AC4FD97004C61AA /* main.cpp */,
+				B2B70D891AC4FEEA004C61AA /* soapC.cpp */,
+				B2B70D901AC4FF21004C61AA /* calc.nsmap */,
+				B2B70D8A1AC4FEEA004C61AA /* soapcalcService.cpp */,
+				B2B70D8B1AC4FEEA004C61AA /* soapcalcService.h */,
+				B2B70D8C1AC4FEEA004C61AA /* soapH.h */,
+				B2B70D8D1AC4FEEA004C61AA /* soapStub.h */,
+			);
+			path = mj_calc_server;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +216,24 @@
 			productReference = B208A0661AC4F5620078FD8D /* mj_calc_cgi */;
 			productType = "com.apple.product-type.tool";
 		};
+		B2B70D7F1AC4FD97004C61AA /* mj_calc_server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2B70D861AC4FD97004C61AA /* Build configuration list for PBXNativeTarget "mj_calc_server" */;
+			buildPhases = (
+				B2B70D871AC4FDB4004C61AA /* ShellScript */,
+				B2B70D7C1AC4FD97004C61AA /* Sources */,
+				B2B70D7D1AC4FD97004C61AA /* Frameworks */,
+				B2B70D7E1AC4FD97004C61AA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mj_calc_server;
+			productName = mj_calc_server;
+			productReference = B2B70D801AC4FD97004C61AA /* mj_calc_server */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +247,9 @@
 						CreatedOnToolsVersion = 6.2;
 					};
 					B208A0651AC4F5620078FD8D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					B2B70D7F1AC4FD97004C61AA = {
 						CreatedOnToolsVersion = 6.2;
 					};
 				};
@@ -202,6 +268,7 @@
 			targets = (
 				B208A0481AC4EA000078FD8D /* mj_calc_xcode */,
 				B208A0651AC4F5620078FD8D /* mj_calc_cgi */,
+				B2B70D7F1AC4FD97004C61AA /* mj_calc_server */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +300,19 @@
 			shellPath = /bin/sh;
 			shellScript = "../../src/soapcpp2 -i -x -S mj_calc_xcode/calc.h\ncp soapC.cpp mj_calc_cgi\ncp soapH.h mj_calc_cgi\ncp soapStub.h mj_calc_cgi\ncp soapcalcService.h mj_calc_cgi\ncp soapcalcService.cpp mj_calc_cgi\n";
 		};
+		B2B70D871AC4FDB4004C61AA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp soapC.cpp mj_calc_server\ncp soapH.h mj_calc_server\ncp soapStub.h mj_calc_server\ncp soapcalcService.h mj_calc_server\ncp soapcalcService.cpp mj_calc_server";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -254,6 +334,16 @@
 				B208A0741AC4F7FA0078FD8D /* soapC.cpp in Sources */,
 				B208A0751AC4F7FA0078FD8D /* soapcalcService.cpp in Sources */,
 				B208A0691AC4F5620078FD8D /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2B70D7C1AC4FD97004C61AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B70D8E1AC4FEEA004C61AA /* soapC.cpp in Sources */,
+				B2B70D8F1AC4FEEA004C61AA /* soapcalcService.cpp in Sources */,
+				B2B70D831AC4FD97004C61AA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +472,32 @@
 			};
 			name = Release;
 		};
+		B2B70D841AC4FD97004C61AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/michaeljones/Documents/gsoap-2.8/gsoap",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B2B70D851AC4FD97004C61AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/michaeljones/Documents/gsoap-2.8/gsoap",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -401,12 +517,22 @@
 				B208A0521AC4EA000078FD8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B208A06A1AC4F5620078FD8D /* Build configuration list for PBXNativeTarget "mj_calc_cgi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B208A06B1AC4F5620078FD8D /* Debug */,
 				B208A06C1AC4F5620078FD8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2B70D861AC4FD97004C61AA /* Build configuration list for PBXNativeTarget "mj_calc_server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2B70D841AC4FD97004C61AA /* Debug */,
+				B2B70D851AC4FD97004C61AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
