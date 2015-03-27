@@ -14,6 +14,7 @@
 #include <mutex>
 
 #include "soapcalcService.h"
+#include "ServiceFactory.h"
 #include "calc.nsmap"
 
 using namespace std;
@@ -59,6 +60,7 @@ int main(int argc, const char * argv[]) {
         while (true) {
             auto shouldSleep = bool{};
             {
+                future<int> waitHandle{};
                 lock_guard<mutex> guard{ cleanupMutex };
                 
                 auto beforeBegin = handles.before_begin();
@@ -66,12 +68,19 @@ int main(int argc, const char * argv[]) {
                 it++;
                 
                 if (it != handles.end()) {
-                    auto fres = it->get();
+                    waitHandle = move(*it);
+                    
+                    // auto fres = it->get();
                     handles.erase_after(beforeBegin);
-                    cerr << "child cleaned!!!!!" << endl;
+                    cerr << "child removed!!!!!" << endl;
                 }
                 else {
                     shouldSleep = true;
+                }
+                
+                if (waitHandle.valid()) {
+                    auto res = waitHandle.get();
+                    cerr << "child cleaned!!!!! " << res << endl;
                 }
             }
             
@@ -101,19 +110,18 @@ int main(int argc, const char * argv[]) {
         
         cerr << errStr.str() << endl;
         
-        auto calcChild = calc.copy();
-        auto task = [=]()->int {
+        auto child = ServiceFactory::Copy(calc);
+        
+        auto task = [=](unique_ptr<calcService> service)->int {
             stringstream childStr;
-            childStr << "Running child: " << calcChild << " on socket: " << calcChild->socket;
+            childStr << "Running child service: " << service.get() << " on socket: " << service->socket;
             cerr << childStr.str() << endl;
-            auto ret = serveClient(calcChild);
-            
-            // This looks horrible.
-            delete calcChild;
+            auto ret = serveClient(service.get());
+
             return ret;
         };
         
-        auto handle = async(launch::async, move(task));
+        auto handle = async(launch::async, task, move(child));
         
         lock_guard<mutex> guard{ cleanupMutex };
         handles.push_front(move(handle));
