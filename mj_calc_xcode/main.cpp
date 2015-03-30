@@ -13,7 +13,7 @@
 
 // const char server[] = "http://websrv.cs.fsu.edu/~engelen/calcserver.cgi";
 // const char server[] = "http://localhost/cgi-bin/mj_calc_cgi";
-const char server[] = "localhost";
+const char server[] = "http://localhost/soap";
 
 
 int main(int argc, const char * argv[]) {
