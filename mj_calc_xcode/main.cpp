@@ -15,7 +15,7 @@
 
 using namespace std;
 
-string const standaloneServer = "http://localhost";
+string const standaloneServer = "http://localhost:18083";
 string const cgiServer = "http://localhost/cgi-bin/mj_calc_cgi";
 string const gsoapServer = "http://localhost/soap";
 string const eduServer = "http://websrv.cs.fsu.edu/~engelen/calcserver.cgi";

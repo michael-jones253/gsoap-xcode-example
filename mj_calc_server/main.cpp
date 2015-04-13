@@ -44,7 +44,7 @@ int main(int argc, const char * argv[]) {
     int m, s; // master and slave sockets
     
     // m = soap_bind(&soap, "machine.genivia.com", 18083, 100);
-    const int port = 80;
+    const int port = 18083;
     const int backlog = 5;
     m = calc.bind("localhost", port, backlog);
     if (m < 0) {
